@@ -1,0 +1,26 @@
+main: com.sermister1.tpwandplugin.TeleportWandPlugin
+name: "TeleportWandPlugin"
+version: "${VERSION}"
+api-version: "1.16"
+author: sermister1
+description: "Plugin for teleport wand and teleport command"
+commands:
+  ex:
+    description: Base command for EXAMPLE
+    usage: "For a list of commands, type /ex help"
+    aliases: example
+  tpblock:
+    description: Command to teleport X blocks forward
+    usage: "/tpblock <blocks to teleport>"
+  givetpstick:
+    description: Command to give teleport stick
+    usage: "/givetpstick"
+permissions:
+  example.test:
+    description: DESCRIPTION
+    default: true
+  example.*:
+    description: Grants all other permissions
+    default: false
+    children:
+      example.test: true
